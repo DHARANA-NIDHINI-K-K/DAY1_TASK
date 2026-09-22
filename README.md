@@ -1,62 +1,101 @@
-# Day 1 - Comparing Chatbot, Rule-Based Workflow, and AI Agent
+# Day 1 Task: Comparing a Plain Chatbot, Rule-Based Workflow, and AI Agent
 
-## Project Overview
+## About This Task
 
-This project compares three different approaches to solving the same private-data problem:
+This project is part of **Unit 1: Foundations of AI Agents**.
 
-1. Plain Chatbot
-2. Rule-Based Workflow
-3. AI Agent
+The purpose of this task is to compare three different approaches to solving the same private-data problem:
 
-The goal is to understand how each approach works, what tools or data it uses, and what limitations it has.
+1. A plain chatbot
+2. A rule-based workflow
+3. An AI agent
 
-## Scenario
+The task demonstrates the difference between a chatbot that mainly uses an LLM to provide responses, a rule-based workflow that follows predefined steps and conditions, and an AI agent that combines an LLM, tools, and a loop.
 
-The scenario used in this project is a private expense-tracking problem.
+## Task Objective
 
-The private expense data is stored in `expenses.txt`.
+For this project, I selected a small private-data scenario and implemented it using all three approaches.
 
-The user asks:
+The same user request is handled by each approach so that their differences can be compared.
+
+The comparison focuses on:
+
+- Flexibility
+- Decision-making
+- Tool usage
+- Private-data access
+- Multi-step task handling
+- Automation
+- Reliability
+
+## Private-Data Scenario
+
+The scenario selected for this project is a private expense-tracking problem.
+
+The private expense data is stored in:
+
+`expenses.txt`
+
+The user can ask a question such as:
 
 > How much did I spend on food?
 
-The three approaches solve this same problem in different ways.
+Each of the three approaches handles this request differently.
 
-## 1. Plain Chatbot
+## Approaches
 
-The plain chatbot mainly provides a response to the user's question.
+### 1. Plain Chatbot
 
-It does not independently use tools to access the private expense file.
+The plain chatbot mainly provides a response using an LLM.
 
-## 2. Rule-Based Workflow
+It does not independently select or use external tools to complete the task.
 
-The rule-based workflow follows predefined steps and conditions.
+### 2. Rule-Based Workflow
 
-It reads the expense data, checks the category of each expense, and adds the amount when the category is `Food`.
+The rule-based workflow follows predefined programming steps and conditions.
 
-No LLM is involved in this workflow.
+There is no LLM involved.
 
-## 3. AI Agent
+The workflow processes the expense data according to fixed rules and produces the result.
 
-The AI agent follows the idea:
+### 3. AI Agent
+
+The AI agent follows the foundation:
 
 **Agent = LLM + Tools + Loop**
 
-The agent can interpret the user's request, use tools to access information, observe the results, and continue taking actions until the task is completed.
+The agent can interpret the user's request, select and use appropriate tools, observe the results, and continue taking actions until the task is completed.
 
-## Project Files
+This allows the agent to handle a more dynamic, multi-step task compared with a fixed rule-based workflow.
 
-- `chatbot.py` - Plain chatbot
-- `workflow.py` - Rule-based workflow
-- `agent.py` - AI agent
-- `expenses.txt` - Private expense data
-- `analysis.md` - Detailed analysis and comparison
-- `requirements.txt` - Project dependencies
-- `Output/` - Screenshots of the three approaches
+## Repository Contents
 
-## How to Run
+- `chatbot.py` - implementation of the plain chatbot
+- `workflow.py` - implementation of the rule-based workflow
+- `agent.py` - implementation of the AI agent
+- `expenses.txt` - private expense data used in the scenario
+- `analysis.md` - detailed explanation, comparison table, suitability analysis, and conclusion
+- `requirements.txt` - project dependencies
+- `Output/` - screenshots showing the three systems running
 
-### Plain Chatbot
+## Expected Result
 
-```bash
-python chatbot.py
+The project demonstrates how the same private-data problem can be approached using:
+
+**LLM response → Plain Chatbot**
+
+**Predefined rules → Rule-Based Workflow**
+
+**LLM + Tools + Loop → AI Agent**
+
+The project also explains the limitations and appropriate use cases of each approach.
+
+## Conclusion
+
+A plain chatbot, a rule-based workflow, and an AI agent solve problems in different ways.
+
+A chatbot is mainly focused on generating responses.
+
+A rule-based workflow follows predefined instructions and conditions.
+
+An AI agent combines an LLM with tools and a loop so that it can reason about a task, use tools, observe results, and continue working until the task is completed.
